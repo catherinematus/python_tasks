@@ -53,3 +53,19 @@ print('Индекс строки с минимальной суммой элем
 # Находим индекс столбца с минимальной суммой элементов
 print('Индекс столбца с минимальной суммой элеметов ' + str(array_sum_1.index(min(array_sum_1))))
 
+import copy
+matrix_top = copy.deepcopy(matrix)
+# Обнуляем все элементы выше главной диагонали
+for i in range(n):
+    for j in range(i+1, n):
+        matrix_top[i][j] = 0
+print(matrix_top)
+
+matrix_down = copy.deepcopy(matrix)
+# Обнуляем все элементы выше главной диагонали
+for i in range(n):
+    for j in range(0, i):
+        matrix_down[i][j] = 0
+print(matrix_down)
+
+
