@@ -38,4 +38,13 @@ for i in range(len(matrix)):
     array_sum.append(sum)
 print('Номер строки с максимальной суммой элементов ' + str(array_sum.index(max(array_sum))+1))
 
+# Находим индекс колонки с максимальной суммой элементов
+array_sum_1 = []
+for i in range(n):
+    s = 0
+    for j in range(m):
+        s += int(matrix[j][i])
+    array_sum_1.append(s)
+print('Номер столбца с максимальной суммой элеметов ' + str(array_sum_1.index(max(array_sum_1)) + 1))
+
 
