@@ -29,22 +29,27 @@ for i in matrix:
         sum += j
 print('Сумма всех элементов матрицы ' + str(sum))
 
-# Находим номер строки с максимальной суммой элементов
+# Находим индекс строки с максимальной суммой элементов
 array_sum = []
 for i in range(len(matrix)):
     sum = 0
     for j in range(len(matrix[i])):
         sum += matrix[i][j]
     array_sum.append(sum)
-print('Номер строки с максимальной суммой элементов ' + str(array_sum.index(max(array_sum))+1))
+print('Индекс строки с максимальной суммой элементов ' + str(array_sum.index(max(array_sum))))
 
-# Находим индекс колонки с максимальной суммой элементов
+# Находим индекс столбца с максимальной суммой элементов
 array_sum_1 = []
 for i in range(n):
     s = 0
     for j in range(m):
         s += int(matrix[j][i])
     array_sum_1.append(s)
-print('Номер столбца с максимальной суммой элеметов ' + str(array_sum_1.index(max(array_sum_1)) + 1))
+print('Индекс столбца с максимальной суммой элеметов ' + str(array_sum_1.index(max(array_sum_1))))
 
+# Находим индекс строки с минимальной суммой элементов
+print('Индекс строки с минимальной суммой элементов ' + str(array_sum.index(min(array_sum))))
+
+# Находим индекс столбца с минимальной суммой элементов
+print('Индекс столбца с минимальной суммой элеметов ' + str(array_sum_1.index(min(array_sum_1))))
 
