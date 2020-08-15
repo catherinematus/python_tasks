@@ -5,6 +5,7 @@ m = int(input('m = '))
 
 # Вводим матрицу случайных чисел с количеством столбцов n и строк m
 from random import randint
+
 matrix = [[randint(a, b) for j in range(n)] for i in range(m)]
 print(matrix)
 
@@ -57,15 +58,12 @@ import copy
 matrix_top = copy.deepcopy(matrix)
 # Обнуляем все элементы выше главной диагонали
 for i in range(n):
-    for j in range(i+1, n):
+    for j in range(i + 1, n):
         matrix_top[i][j] = 0
 print(matrix_top)
-
 matrix_down = copy.deepcopy(matrix)
 # Обнуляем все элементы выше главной диагонали
 for i in range(n):
     for j in range(0, i):
         matrix_down[i][j] = 0
 print(matrix_down)
-
-
